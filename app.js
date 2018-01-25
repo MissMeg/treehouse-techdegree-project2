@@ -128,7 +128,7 @@ $(document).ready(() => {
         searchPages(findPerson());
     });
     
-    //show only the correct students based on the page number clicked matching the data-page attribute
+    //show only the correct students based on the page number clicked matching the data-page attribute - move the active class to clicked page
     $(document).on('click', '.pagination', (event) => {
         $('.active').removeClass('active');
         $('.student-item').hide();
