@@ -112,6 +112,10 @@ $(document).ready(() => {
             results.show();
             $('.student-item').hide();
             $('[data-page="1"]').show();
+            //don't show pagination if there is only one page
+            if (numberSearchPages === 1) {
+                $('.pagination').hide();
+            }
         }
     }
     //call searchPages on either button click or keyboard enter to show results
