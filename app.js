@@ -47,7 +47,7 @@ $(document).ready(() => {
         }
         html+= '</ul></div>';
         //adding the list to the page
-        $('.student-list').append(html);
+        $('.page').append(html);
         //giving the first page the active class
         $('.pagination li').first().addClass('active');
     }
@@ -130,8 +130,10 @@ $(document).ready(() => {
     
     //show only the correct students based on the page number clicked matching the data-page attribute
     $(document).on('click', '.pagination', (event) => {
+        $('.active').removeClass('active');
         $('.student-item').hide();
         let clickedPage = $(event.target).text();
         $(`[data-page="${clickedPage}"]`).show();
+        $(event.target).parent().addClass('active');
     });
 });
